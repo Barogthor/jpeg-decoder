@@ -77,7 +77,7 @@ impl<R: Read> Decoder<R> {
             ac_huffman_tables: vec![None, None, None, None],
             quantization_tables: [None, None, None, None],
             restart_interval: 0,
-            color_transform: None,
+            color_transform: Some(AdobeColorTransform::Unknown),
             is_jfif: false,
             is_mjpeg: false,
             coefficients: Vec::new(),
